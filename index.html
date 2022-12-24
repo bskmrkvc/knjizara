@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knjizara</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="logo-link">
+        <a href="#">
+          <img alt="Logo knjizare" id="navbar-logo" src="img/logo.png">
+        </a>
+      </li>
+      <li><a href="#">Početna</a></li>
+      <li><a href="#">Knjige</a></li>
+      <li><a href="#">Pribor</a></li>
+      <li><a href="#">Galerija</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div id="slajder">
+    <img src="img/slajder/slajder-1.jpg" alt="Svecano otvaranje">
+    <img src="img/slajder/slajder-2.jpg" alt="Asortiman pribora">
+    <img src="img/slajder/slajder-3.jpg" alt="Nasa ponuda">
+    <button class="prethodni">&laquo;</button>
+    <button class="sledeci">&raquo;</button>
+  </div>
+  <script>
+  var slajdovi = document.querySelectorAll('#slajder img');
+  var trenutniSlajd = 0;
+
+  slajdovi[trenutniSlajd].classList.add('active');
+
+  var slajdInterval = setInterval(sledeciSlajd,5000);
+
+  function sledeciSlajd() {
+    slajdovi[trenutniSlajd].classList.remove('active');
+    trenutniSlajd = (trenutniSlajd+1)%slajdovi.length;
+    slajdovi[trenutniSlajd].classList.add('active');
+  }
+
+  function prethodniSlajd() {
+    slajdovi[trenutniSlajd].classList.remove('active');
+    trenutniSlajd = (trenutniSlajd - 1 + slajdovi.length) % slajdovi.length;
+    slajdovi[trenutniSlajd].classList.add('active');
+  }
+
+  var prevButton = document.querySelector('#slajder .prethodni');
+  var nextButton = document.querySelector('#slajder .sledeci');
+
+  prevButton.addEventListener('click', function() {
+    clearInterval(slajdInterval);
+    prethodniSlajd();
+    slajdInterval = setInterval(sledeciSlajd,5000);
+  });
+
+  nextButton.addEventListener('click', function() {
+    clearInterval(slajdInterval);
+    sledeciSlajd();
+    slajdInterval = setInterval(sledeciSlajd,5000);
+  });
+
+  </script>
+
+  <h2 class="pocetna-naslov">Najčitanije</h2>
+  <div id="najcitanije-container">
+    <div class="knjiga-container">
+      <img src="img/knjige/meditacije.jpg" alt="Marko Aurelije Meditacije" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Misli</p>
+        <h4 class="pisac">Marko Aurelije</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">770rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/mala_italijanka.jpg" alt="Mala Italijanka" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Mala Italijanka</p>
+        <h4 class="pisac">Lusinda Rajli</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1299rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/pobednici.jpg" alt="Pobednici" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Pobednici</p>
+        <h4 class="pisac">Fredrik Bakman</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1499rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/rudnik.jpg" alt="Rudnik" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Rudnik</p>
+        <h4 class="pisac">Miodrag Majić</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1199rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/strelac.jpg" alt="Strelac" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Strelac</p>
+        <h4 class="pisac">Paulo Koeljo</h4>
+        <hr/>
+        <div class="selekcija" >
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">899rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/dune.jpg" alt="Dune" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Dune</p>
+        <h4 class="pisac">Frank Herbert</h4>
+        <hr/>
+        <div class="selekcija" >
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1599rsd</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="crta"/>
+
+  <h2 class="pocetna-naslov">Naši urednici preporučuju</h2>
+  <div id="najcitanije-container">
+    <div class="knjiga-container">
+      <img src="img/knjige/klanicapet.jpg" alt="Klanica Pet" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Klanica Pet</p>
+        <h4 class="pisac">Kurt Vonegat</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">899rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/jediniizlaz.jpg" alt="Jedini Izlaz" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Jedini Izlaz</p>
+        <h4 class="pisac">Marko Popović</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1099rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/zastospavamo.jpg" alt="Zašto spavamo" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Zašto spavamo</p>
+        <h4 class="pisac">Metju Voker</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">1199rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/borbadopobede.jpg" alt="Borba do pobede" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Borba do pobede</p>
+        <h4 class="pisac">Srđan Krstić</h4>
+        <hr/>
+        <div class="selekcija">
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">599rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/mitoptici.jpg" alt="Mit o ptici" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Mit o ptici</p>
+        <h4 class="pisac">Miroslav Antić</h4>
+        <hr/>
+        <div class="selekcija" >
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">999rsd</div>
+        </div>
+      </div>
+    </div>
+    <div class="knjiga-container">
+      <img src="img/knjige/sobacuda.jpg" alt="Soba čuda" class="img-knjiga">
+      <div class="info">
+        <p class="ime-knjige">Soba čuda</p>
+        <h4 class="pisac">Žilijen Sandrel</h4>
+        <hr/>
+        <div class="selekcija" >
+          <img id="korpa" alt="Korpa ikonica" src="img/kolica.png"></img>
+          <div class="cena">699rsd</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="crta"/>
+  <div id="clanska-kartica">
+    <img src="img/clanskakartica.jpg" alt="Clanska Kartica reklama">
+  </div>
+</body>
+</html>
