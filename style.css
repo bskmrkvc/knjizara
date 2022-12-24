@@ -198,16 +198,65 @@ nav li a:hover{
 }
 
 .crta{
-  margin: 50px 5px 20px 5px;
+  position: relative;
+  margin: 60px 5px 20px 5px;
 }
 
-#clanska-kartica{
+#clanska-kartica-newsletter{
   width: 800px;
-  margin: auto;
   overflow: none;
+  display: inline;
+  justify-content: space-between;
 }
 
-#clanska-kartica img{
-  width:100%;
-  
+#clanska-kartica-newsletter img{
+  margin-left: 150px;
+  margin-right: 50px;
+  width:40%;
+  border-radius: 15px;
+  float: left;
 }
+
+#news-forma {
+  display: flex;
+  flex-direction: column;
+  float: center;
+  height: 320px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 75px;
+  background: rgb(0,70,150);
+  background: linear-gradient(90deg, rgba(0,70,150,1) 0%, rgba(0,0,0,1) 100%);
+  border-radius: 10px;
+}
+
+#news-labela{
+  font-size: 64px;
+  text-align: center;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+}
+
+.newsletter-unos{
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 50px;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#news-dugme {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 3px;
+  color: rgba(0,70,150,1);
+  width: 30%;
+  height: 50px;
+  cursor: pointer;
+}
+
