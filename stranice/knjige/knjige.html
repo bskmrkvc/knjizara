@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knjizara - Knjige</title>
+  <link rel="stylesheet" href="knjigeStyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav>
+      <ul>
+        <li class="logo-link">
+          <a href="../../index.html">
+            <img alt="Logo knjizare" id="navbar-logo" src="../../img/logo.png">
+          </a>
+        </li>
+        <li><a href="../../index.html">Početna</a></li>
+        <li><a href="knjige.html">Knjige</a></li>
+        <li><a href="stranice/pribor/pribor.html">Pribor</a></li>
+        <li><a href="stranice/galerija/galerija.html">Galerija</a></li>
+        <li><a href="stranice/kontakt/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    
+    <h1 id="naslov-knjige">Domaće knjige</h1>
+    <div>
+        <div id="meni-selekt">
+            <ul>Kategorije<br><br>
+                <li onclick="fillDomace()">Domaće knjige</li>
+                <li onclick="fillStrane()">Strane knjige</li>
+                <li onclick="fillBestseleri()">Bestseleri</li>
+                <li onclick="fillRomani()">Romani</li>
+                <li onclick="fillHorori()">Horor</li>
+                <li onclick="fillLjubavni()">Ljubavni</li>
+            </ul>
+        </div>
+        <script>
+            function fillDomace(){
+                document.getElementById("naslov-knjige").innerHTML = "Domaće knjige";
+
+                document.getElementById("knjiga1").innerHTML =
+                    '<img src="img-knjige/doktorD.jpg" alt="Doktor D" class="img-knjiga">' + 
+                    '<div class="info">'+
+                        '<p class="ime-knjige">Doktor D</p>'+
+                        '<h4 class="pisac">Goran Marković</h4>' +
+                        '<hr/><br/>' + 
+                        '<div class="selekcija">' + 
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                            '<div class="cena">699rsd</div>' +
+                        '</div>' + 
+                    '</div>';
+
+                document.getElementById("knjiga2").innerHTML = 
+                    '<img src="img-knjige/rudnik.jpg" alt="Rudnik" class="img-knjiga">' +
+                    '<div class="info">' +
+                        '<p class="ime-knjige">Rudnik</p>' +
+                        '<h4 class="pisac">Miodrag Majić</h4>' +
+                        '<hr/><br/>' +
+                        '<div class="selekcija">' +
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                            '<div class="cena">1199rsd</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/blank.jpg" alt="Blank" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Blank</p>' +
+                    '<h4 class="pisac">Feđa Štukan</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1299rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/semperidem.jpg" alt="Semper Idem" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Semper Idem</p>' +
+                    '<h4 class="pisac">Đorđe Lebović</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1299rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/ikonostas.jpg" alt="Ikonostas" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Ikonostas</p>' +
+                    '<h4 class="pisac">Goran Petrović</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">899rsd</div>' +
+                    '</div>' +
+                '</div>';
+                
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/crnaknjiga.jpg" alt="Crna knjiga" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Crna knjiga</p>' +
+                    '<h4 class="pisac">Luka Tripković</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">990rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/jugosloveni.jpg" alt="Jugosloveni" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Jugosloveni</p>' +
+                    '<h4 class="pisac">Boris Miljković</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1320rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+                
+               document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/titoija.jpg" alt="Tito i ja" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tito i ja</p>'+
+                    '<h4 class="pisac">Goran Marković</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">699rsd</div>' +
+                   ' </div> '+
+                '</div>';
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/austrijanka.jpg" alt="Austrijanka" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Austrijanka</p>' +
+                    '<h4 class="pisac">Zoran Milekić</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+            }
+            function fillStrane(){
+                document.getElementById("naslov-knjige").innerHTML = "Strane knjige";
+
+                document.getElementById("knjiga1").innerHTML =
+                    '<img src="img-knjige/dune.jpg" alt="Dune" class="img-knjiga">' + 
+                    '<div class="info">'+
+                        '<p class="ime-knjige">Dune</p>'+
+                        '<h4 class="pisac">Frank Herbert</h4>' +
+                        '<hr/><br/>' + 
+                        '<div class="selekcija">' + 
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                            '<div class="cena">1599rsd</div>' +
+                        '</div>' + 
+                    '</div>';
+
+                document.getElementById("knjiga2").innerHTML = 
+                    '<img src="img-knjige/twistedlove.jpg" alt="Twisted Love" class="img-knjiga">' +
+                    '<div class="info">' +
+                        '<p class="ime-knjige">Twisted Love</p>' +
+                        '<h4 class="pisac">Ana Huang</h4>' +
+                        '<hr/><br/>' +
+                        '<div class="selekcija">' +
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                            '<div class="cena">1539rsd</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/loveless.jpg" alt="Loveless" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Loveless</p>' +
+                    '<h4 class="pisac">Alice Oseman</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1799rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/blonde.jpg" alt="Blonde" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Blonde</p>' +
+                    '<h4 class="pisac">Joyce Carol Oates</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1999rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/whiteout.jpg" alt="Whiteout" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Whiteout</p>' +
+                    '<h4 class="pisac">Various</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1699rsd</div>' +
+                    '</div>' +
+                '</div>';
+                
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/traclewalker.jpg" alt="Treacle Walker" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Treacle Walker</p>' +
+                    '<h4 class="pisac">Alex Garner</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1649rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/thekillingkind.jpg" alt="The killing kind" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">The killing kind</p>' +
+                    '<h4 class="pisac">Jane Casey</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1649rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+                
+               document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/oneforsorrow.jpg" alt="One for Sorrow" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">One for Sorrow</p>'+
+                    '<h4 class="pisac">Helen Fields</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1699rsd</div>' +
+                   ' </div> '+
+                '</div>'
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/theguestlist.jpg" alt="The guest list" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">The guest list</p>' +
+                    '<h4 class="pisac">Lucy Foley</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">1899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+            }
+            function fillBestseleri(){
+                document.getElementById("naslov-knjige").innerHTML = "Bestseleri";
+
+                document.getElementById("knjiga1").innerHTML =
+                    '<img src="img-knjige/inferno.jpg" alt="Inferno" class="img-knjiga">' + 
+                    '<div class="info">'+
+                        '<p class="ime-knjige">Inferno</p>'+
+                        '<h4 class="pisac">Den Braun</h4>' +
+                        '<hr/><br/>' + 
+                        '<div class="selekcija">' + 
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                            '<div class="cena">1320rsd</div>' +
+                        '</div>' + 
+                    '</div>';
+
+                document.getElementById("knjiga2").innerHTML = '<img src="img-knjige/tihipacijent.jpg" alt="Tihi pacijent" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tihi pacijent</p>'+
+                    '<h4 class="pisac">Aleks Majklidis</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">899rsd</div>' +
+                   ' </div> '+
+                '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/mirisneba.jpg" alt="Miris Neba" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Miris Neba</p>' +
+                    '<h4 class="pisac">Isidora Bjelica</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">599rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/theguestlist.jpg" alt="The guest list" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">The guest list</p>' +
+                    '<h4 class="pisac">Lucy Foley</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">1899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/gospodin.jpg" alt="Gospodin" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Gospodin</p>' +
+                    '<h4 class="pisac">E. L. Džejms</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1199rsd</div>' +
+                    '</div>' +
+                '</div>';
+                
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/fatalnazena.jpg" alt="Fatalna žena" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Fatalna žena</p>' +
+                    '<h4 class="pisac">Sandra Braun</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">999rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/obiljekatarina.jpg" alt="Obilje Katarina" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Obilje Katarina</p>' +
+                    '<h4 class="pisac">Džon Grin</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+                
+               document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/tihipacijent.jpg" alt="Tihi pacijent" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tihi pacijent</p>'+
+                    '<h4 class="pisac">Aleks Majklidis</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">899rsd</div>' +
+                   ' </div> '+
+                '</div>'
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/thekillingkind.jpg" alt="The killing kind" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">The killing kind</p>' +
+                    '<h4 class="pisac">Jane Casey</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1649rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+            }
+            function fillRomani(){
+                document.getElementById("naslov-knjige").innerHTML = "Romani";
+
+                document.getElementById("knjiga1").innerHTML =
+                '<img src="img-knjige/titoija.jpg" alt="Tito i ja" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tito i ja</p>'+
+                    '<h4 class="pisac">Goran Marković</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">699rsd</div>' +
+                   ' </div> '+
+                '</div>';
+
+                document.getElementById("knjiga2").innerHTML = 
+                    '<img src="img-knjige/stanuparizu.jpg" alt="Stan u Parizu" class="img-knjiga">' +
+                    '<div class="info">' +
+                        '<p class="ime-knjige">Stan u Parizu</p>' +
+                        '<h4 class="pisac">Gijom Muso</h4>' +
+                        '<hr/><br/>' +
+                        '<div class="selekcija">' +
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                            '<div class="cena">899rsd</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/austrijanka.jpg" alt="Austrijanka" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Austrijanka</p>' +
+                    '<h4 class="pisac">Zoran Milekić</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/gospodin.jpg" alt="Gospodin" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Gospodin</p>' +
+                    '<h4 class="pisac">E. L. Džejms</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1199rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/thekillingkind.jpg" alt="The killing kind" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">The killing kind</p>' +
+                    '<h4 class="pisac">Jane Casey</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1649rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+                
+                document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/fatalnazena.jpg" alt="Fatalna žena" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Fatalna žena</p>' +
+                    '<h4 class="pisac">Sandra Braun</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">999rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/obiljekatarina.jpg" alt="Obilje Katarina" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Obilje Katarina</p>' +
+                    '<h4 class="pisac">Džon Grin</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+                
+               document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/tihipacijent.jpg" alt="Tihi pacijent" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tihi pacijent</p>'+
+                    '<h4 class="pisac">Aleks Majklidis</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">899rsd</div>' +
+                   ' </div> '+
+                '</div>'
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/jugosloveni.jpg" alt="Jugosloveni" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Jugosloveni</p>' +
+                    '<h4 class="pisac">Boris Miljković</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1320rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+            }
+            function fillHorori(){
+                document.getElementById("naslov-knjige").innerHTML = "Horori";
+
+                document.getElementById("knjiga1").innerHTML =
+                '<img src="img-knjige/parazit.jpg" alt="Parazit" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Parazit</p>'+
+                    '<h4 class="pisac">Artur Konan Dojl</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1320rsd</div>' +
+                   ' </div> '+
+                '</div>';
+
+                document.getElementById("knjiga2").innerHTML = 
+                    '<img src="img-knjige/ajkula.jpg" alt="Ajkula" class="img-knjiga">' +
+                    '<div class="info">' +
+                        '<p class="ime-knjige">Ajkula</p>' +
+                        '<h4 class="pisac">Piter Benčli</h4>' +
+                        '<hr/><br/>' +
+                        '<div class="selekcija">' +
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                            '<div class="cena">999rsd</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/dzelat.jpg" alt="Dželat" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Dželat</p>' +
+                    '<h4 class="pisac">Kris Karter</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">999rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/moctame.jpg" alt="Moć tame" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Moć tame</p>' +
+                    '<h4 class="pisac">Edit Nesbit</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">550rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/thekillingkind.jpg" alt="Gas do daske" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Gas do daske</p>' +
+                    '<h4 class="pisac">Džo Hil</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1249rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+                
+                document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/teatrogrottesco.jpg" alt="Teatro Grottesco" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Teatro Grottesco</p>' +
+                    '<h4 class="pisac">Tomas Ligoti</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1320rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/pacijent.jpg" alt="Pacijent" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Pacijent</p>' +
+                    '<h4 class="pisac">Džasper Devit</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">799rsd</div> '+
+                    '</div> '+
+                '</div> ';
+                
+               document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/tihipacijent.jpg" alt="Tihi pacijent" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Tihi pacijent</p>'+
+                    '<h4 class="pisac">Aleks Majklidis</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">899rsd</div>' +
+                   ' </div> '+
+                '</div>'
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/osveta.jpg" alt="Osveta" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Osveta</p>' +
+                    '<h4 class="pisac">Joko Ogava</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">880rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+            }
+            function fillLjubavni(){
+                document.getElementById("naslov-knjige").innerHTML = "Ljubavni";
+
+                document.getElementById("knjiga1").innerHTML =
+                '<img src="img-knjige/austrijanka.jpg" alt="Austrijanka" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Austrijanka</p>' +
+                    '<h4 class="pisac">Zoran Milekić</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+                document.getElementById("knjiga2").innerHTML = 
+                '<img src="img-knjige/blonde.jpg" alt="Blonde" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Blonde</p>' +
+                    '<h4 class="pisac">Joyce Carol Oates</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1999rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga3").innerHTML = '<img src="img-knjige/twistedlove.jpg" alt="Twisted Love" class="img-knjiga">' +
+                    '<div class="info">' +
+                        '<p class="ime-knjige">Twisted Love</p>' +
+                        '<h4 class="pisac">Ana Huang</h4>' +
+                        '<hr/><br/>' +
+                        '<div class="selekcija">' +
+                            '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                            '<div class="cena">1539rsd</div>' +
+                        '</div>' +
+                    '</div>';
+
+                document.getElementById("knjiga4").innerHTML = '<img src="img-knjige/gospodin.jpg" alt="Gospodin" class="img-knjiga">'+
+                '<div class="info">' +
+                    '<p class="ime-knjige">Gospodin</p>' +
+                    '<h4 class="pisac">E. L. Džejms</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1199rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("knjiga5").innerHTML = '<img src="img-knjige/fatalnazena.jpg" alt="Fatalna žena" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Fatalna žena</p>' +
+                    '<h4 class="pisac">Sandra Braun</h4>' +
+                    '<hr/><br/>' + 
+                    '<div class="selekcija"> '+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">999rsd</div>' +
+                    '</div>' +
+                '</div>';
+                
+                document.getElementById("knjiga8").innerHTML = '<img src="img-knjige/obiljekatarina.jpg" alt="Obilje Katarina" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Obilje Katarina</p>' +
+                    '<h4 class="pisac">Džon Grin</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">899rsd</div> '+
+                    '</div> '+
+                '</div> ';
+
+                document.getElementById("knjiga6").innerHTML = '<img src="img-knjige/mojgreh.jpg" alt="Moj Greh" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Moj Greh</p>' +
+                    '<h4 class="pisac">Mersedes Ron</h4> '+
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img> '+
+                        '<div class="cena">1199rsd</div> '+
+                    '</div> '+
+                '</div> ';
+                
+               document.getElementById("knjiga7").innerHTML = '<img src="img-knjige/odleti.jpg" alt="Odleti" class="img-knjiga">'+
+                '<div class="info">'+
+                    '<p class="ime-knjige">Odleti</p>'+
+                    '<h4 class="pisac">Kristin Hana</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1499rsd</div>' +
+                   ' </div> '+
+                '</div>'
+
+                document.getElementById("knjiga9").innerHTML = '<img src="img-knjige/zacinljubavi.jpg" alt="Začin ljubavi" class="img-knjiga">' +
+                '<div class="info">' +
+                    '<p class="ime-knjige">Začin ljubavi</p>' +
+                    '<h4 class="pisac">Grejs Barouz</h4>' +
+                    '<hr/><br/>' +
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">1280rsd</div>' +
+                    '</div>' +
+               ' </div>'; 
+            }
+        </script>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga1">
+                <img src="img-knjige/doktorD.jpg" alt="Doktor D" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Doktor D</p>
+                    <h4 class="pisac">Goran Marković</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">699rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga2">
+                <img src="img-knjige/rudnik.jpg" alt="Rudnik" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Rudnik</p>
+                    <h4 class="pisac">Miodrag Majić</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1199rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga3">
+                <img src="img-knjige/blank.jpg" alt="Blank" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Blank</p>
+                    <h4 class="pisac">Feđa Štukan</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1299rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga4">
+                <img src="img-knjige/semperidem.jpg" alt="Semper Idem" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Semper Idem</p>
+                    <h4 class="pisac">Đorđe Lebović</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1299rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga5">
+                <img src="img-knjige/ikonostas.jpg" alt="Ikonostas" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Ikonostas</p>
+                    <h4 class="pisac">Goran Petrović</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">899rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga6">
+                <img src="img-knjige/crnaknjiga.jpg" alt="Crna knjiga" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Crna knjiga</p>
+                    <h4 class="pisac">Luka Tripković</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">990rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga7">
+                <img src="img-knjige/jugosloveni.jpg" alt="Jugosloveni" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Jugosloveni</p>
+                    <h4 class="pisac">Boris Miljković</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1320rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga8">
+                <img src="img-knjige/titoija.jpg" alt="Tito i ja" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Tito i ja</p>
+                    <h4 class="pisac">Goran Marković</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">699rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="knjige">
+            <div class="knjiga-container" id="knjiga9">
+                <img src="img-knjige/austrijanka.jpg" alt="Austrijanka" class="img-knjiga">
+                <div class="info">
+                    <p class="ime-knjige">Austrijanka</p>
+                    <h4 class="pisac">Zoran Milekić</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">899rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer id="footer">
+        <div id="levi-futer">
+          <ul>Najposećenije stranice:
+            <li>
+              <a id="prvi-link" href="#">Link1</a>
+            </li>
+            <li>
+              <a id="drugi-link" href="#">Link1</a>
+            </li>
+            <li>
+              <a id="treci-link" href="#">Link1</a>
+            </li>
+          </ul>
+        </div>
+    
+        <div id="desni-futer">Knjizara copyright 2023&copy;</div>
+    </footer>
+</body>
+</html>
