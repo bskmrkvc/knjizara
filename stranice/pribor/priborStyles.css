@@ -55,13 +55,26 @@ nav li {
 nav li a {
   transition: 0.2s ease-in;
   font-size: 40px;  
-  color: rgb(25, 25, 25);  
+  color: rgb(25, 25, 25) !important;  
   text-decoration: none;  
 }
 
 nav li a:hover{
   font-size: 50px;
   transition: 0.2s ease-in-out;
+}
+
+a{
+  color: rgba(35, 35, 35, 1);
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: gray;
+
 }
 
 #naslov-pribor{
@@ -334,9 +347,7 @@ nav li a:hover{
   }
 
   #pribor-wrapper{
-    width: 80%;
-    margin-left: 100px;
-    margin-right: auto;
+    width: 85%;
   }
 
   #pribor{
@@ -372,10 +383,15 @@ nav li a:hover{
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    left: 25%;
+    left: 37%;
   }
   
-  
+  #meni-selekt{
+    padding-left: 0;
+    margin-left: 25%;
+    width: 50%;
+  }
+
   #footer{
     display: block;
   }

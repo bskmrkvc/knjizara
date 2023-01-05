@@ -57,13 +57,26 @@ nav li {
 nav li a {
   transition: 0.2s ease-in;
   font-size: 40px;  
-  color: rgb(25, 25, 25);  
+  color: rgb(25, 25, 25) !important;  
   text-decoration: none;  
 }
 
 nav li a:hover{
   font-size: 50px;
   transition: 0.2s ease-in-out;
+}
+
+a{
+  color: rgba(35, 35, 35, 1);
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: gray;
+
 }
 
 #naslov-galerija{
@@ -237,6 +250,15 @@ div label img{
   }
 }
 @media screen and (max-width: 760px) {
+  .lightbox img {
+    height: 200px;
+    width: 266px;
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    max-width: 76%;
+    max-height: 76%;
+  }
   nav{
     height: 400px;
   }
@@ -280,7 +302,7 @@ div label img{
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    left: 25%;
+    left: 37%;
   }
   
   #footer{

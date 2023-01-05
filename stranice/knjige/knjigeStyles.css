@@ -7,6 +7,8 @@
 
 body{
   background-image: url("../../img/bg.jpg");
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 #navbar-logo{
@@ -55,13 +57,26 @@ nav li {
 nav li a {
   transition: 0.2s ease-in;
   font-size: 40px;  
-  color: rgb(25, 25, 25);  
+  color: rgb(25, 25, 25) !important;  
   text-decoration: none;  
 }
 
 nav li a:hover{
   font-size: 50px;
   transition: 0.2s ease-in-out;
+}
+
+a{
+  color: rgba(35, 35, 35, 1);
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: gray;
+
 }
 
 #naslov-knjige{
@@ -330,9 +345,7 @@ nav li a:hover{
   }
 
   #knjige-wrapper{
-    width: 80%;
-    margin-left: 100px;
-    margin-right: auto;
+    width: 85%;
   }
 
   #knjige{
@@ -368,10 +381,15 @@ nav li a:hover{
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    left: 25%;
+    left: 37%;
   }
   
-  
+  #meni-selekt{
+    padding-left: 0;
+    margin-left: 25%;
+    width: 50%;
+  }
+
   #footer{
     display: block;
   }
@@ -390,5 +408,6 @@ nav li a:hover{
     margin-right: auto;
     text-align: center;
     font-size: 10px;
+    
   }
 }

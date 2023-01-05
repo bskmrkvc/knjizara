@@ -57,7 +57,7 @@ nav li {
 nav li a {
   transition: 0.2s ease-in;
   font-size: 40px;  
-  color: rgb(25, 25, 25);  
+  color: rgb(25, 25, 25) !important;  
   text-decoration: none;  
 }
 
@@ -66,6 +66,18 @@ nav li a:hover{
   transition: 0.2s ease-in-out;
 }
 
+a{
+  color: rgba(35, 35, 35, 1);
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: gray;
+
+}
 
 #slajder {
   position: relative;
@@ -73,8 +85,7 @@ nav li a:hover{
   height: 450px;
   overflow: hidden;
   margin-top: 20px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 25px;
 }
 
 #slajder img {
@@ -394,6 +405,9 @@ nav li a:hover{
   nav ul{
     margin-top: 130px;
   }
+  .knjiga-container{
+    margin: 10px;
+  }
   .logo-link{
     margin-left: auto;
     margin-right: auto;
@@ -420,13 +434,13 @@ nav li a:hover{
     margin-right: auto;
     position: absolute;
     width: 100%;
-    left: 36%;
+    left: 37%;
   }
   #slajder img{
-    height: 150px;
+    height: 125px;
   }
   #slajder{
-    height: 150px;
+    height: 125px;
   }
   #clanska-kartica-newsletter{
     width: 70%;
