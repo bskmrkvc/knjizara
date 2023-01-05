@@ -169,11 +169,13 @@ nav li a:hover{
   margin-bottom: 0;
   font-size: x-large;
   font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 
 .pisac{
   margin-bottom: 10px;
   font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
 }
 
 .selekcija{
@@ -275,9 +277,11 @@ nav li a:hover{
   white-space: nowrap;
   margin-top: 70px;
   border-radius: 20px;
+  
 }
 
 #levi-futer{
+  margin-top: 10px;
   margin-left: 40px;
   width: 85%;
   display: inline-block;
@@ -291,10 +295,172 @@ nav li a:hover{
   display: inline-block;
   padding-top: 15px;
   padding-left: 15px;
-  
 }
 
 #desni-futer{
   font-family: 'Quicksand', sans-serif;
   display: inline-block;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1471px) {
+  #slajder{
+    height: 350px;
+  }
+  #slajder img{
+    height: 350px;
+  }
+  .knjiga-container{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+  }
+  #levi-futer{
+    width: 80%;
+  }
+  #desni-futer{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1213px){
+  #slajder{
+    height: 325px;
+  }
+  #slajder img{
+    height: 325px;
+  }
+  .knjiga-container{
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  #news-dugme{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1063px) {
+  #slajder img{
+    height: 300px;
+  }
+  #slajder{
+    height: 300px;
+  }
+  .knjiga-container{
+    margin: 50px;
+  }
+  #clanska-kartica-newsletter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #clanska-kartica-newsletter img{
+    width: 100%;
+    margin: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #news-forma{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 1px solid red;
+    background: #ff7878;
+  }
+  #levi-futer{
+    width: 75%;
+  }
+
+}
+@media screen and (max-width: 960px) {
+  nav li{
+    margin-right: 20px;
+  }
+  
+}
+@media screen and (max-width: 760px) {
+  nav{
+    height: 400px;
+  }
+  nav *{
+    display: block;
+  }
+  nav li{
+    width: 100%;
+  }
+  nav ul{
+    margin-top: 130px;
+  }
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100%;
+    left: 41%;
+  }
+  #slajder img{
+    height: 200px;
+  }
+  #slajder{
+    height: 200px;
+  }
+  #clanska-kartica-newsletter{
+    width: 50%;
+  }
+  #levi-futer{
+    width: 65%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100%;
+    left: 36%;
+  }
+  #slajder img{
+    height: 150px;
+  }
+  #slajder{
+    height: 150px;
+  }
+  #clanska-kartica-newsletter{
+    width: 70%;
+  }
+  #news-forma{
+    height: 250px;
+  }
+  #news-forma label{
+    font-size: 32px;
+  }
+  .newsletter-unos{
+    font-size: 18px;
+  }
+  #news-forma button{
+    margin: auto;
+    width: 70%;
+  }
+  #footer{
+    display: block;
+  }
+  #levi-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
+  #desni-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
 }

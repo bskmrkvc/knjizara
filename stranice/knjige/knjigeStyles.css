@@ -152,11 +152,13 @@ nav li a:hover{
     margin-bottom: 0;
     font-size: x-large;
     font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
 }
   
 .pisac{
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
 }
   
 .selekcija{
@@ -220,4 +222,173 @@ nav li a:hover{
     font-family: 'Quicksand', sans-serif;
     display: inline-block;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 1471px) {
+  .knjiga-container{
+    margin: 5px;
+  }
+  #levi-futer{
+    width: 80%;
+  }
+  #desni-futer{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1381px) {
+  .knjiga-container{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+  }
+  #levi-futer{
+    width: 80%;
+  }
+  #desni-futer{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1275px){
+  .knjiga-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 1155px){
+  .knjiga-container{
+    margin: 25px 0px 5px 0px;
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  #meni-selekt{
+    width: 80%;
+    text-align: center;
+  }
+  #meni-selekt ul li{
+    text-align: center;
+  }
+  #knjige{
+    margin-top: 10px;
+    width: 20%;
+  }
+  .knjiga-container{
+    margin: 5px;
+  }
+  
+  #levi-futer{
+    width: 75%;
+  }
+
+}
+@media screen and (max-width: 859px) {
+  #knjige-wrapper{
+    margin-left: 80px;
+    margin-right: auto;
+  }
+  #knjige{
+    margin-top: 10px;
+    width: 25%;
+  }
+  .knjiga-container{
+    margin: 5px;
+  }
+  nav li{
+    margin-right: 20px;
+  }
+  #levi-futer{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 760px) {
+  nav{
+    height: 400px;
+  }
+  nav *{
+    display: block;
+  }
+  nav li{
+    width: 100%;
+  }
+  nav ul{
+    margin-top: 130px;
+  }
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100%;
+    left: 41%;
+  }
+
+  #meni-selekt{
+    width: 75%;
+  }
+
+  #knjige-wrapper{
+    width: 80%;
+    margin-left: 100px;
+    margin-right: auto;
+  }
+
+  #knjige{
+    margin-top: 10px;
+    width: 40%;
+  }
+
+  #levi-futer{
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 525px){
+  #meni-selekt{
+    width: 60%;
+  }
+  #knjige{
+    margin-top: 10px;
+    width: 70%;
+  }
+
+  #levi-futer{
+    font-size: 10px;
+    width: 65%;
+  }
+  #desni-futer{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 25%;
+  }
+  
+  
+  #footer{
+    display: block;
+  }
+  #levi-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
+  #desni-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
 }

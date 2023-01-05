@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knjizara</title>
+  <link rel="stylesheet" href="kontaktStyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="logo-link">
+        <a href="../../index.html">
+          <img alt="Logo knjizare" id="navbar-logo" src="../../img/logo.png">
+        </a>
+      </li>
+      <li><a href="../../index.html">Početna</a></li>
+      <li><a href="../knjige/knjige.html">Knjige</a></li>
+      <li><a href="../pribor/pribor.html">Pribor</a></li>
+      <li><a href="../galerija/galerija.html">Galerija</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+
+  <h1 id="naslov-kontakt">Kontakt</h1>
+
+  <div id="kontakt-sadrzaj">
+    <div class="kontakt-forma" style="display: flex; justify-content: center;">
+      <form>
+        <label for="name">Ime:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surname">Prezime:</label><br>
+        <input type="text" id="surname" name="surname"><br>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Lozinka:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="confirm_password">Potvrda lozinke:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password"><br><br>
+        <input id="submitdugme" type="submit" value="Kontaktirajte nas!" onclick="return validiraj()">
+      </form>
+    </div>
+  
+    <div class="mapa">
+      <div class="gmap">
+        <iframe 
+          width="100%" 
+          height="600" 
+          id="gmap_canvas" 
+          src="https://maps.google.com/maps?q=Vojvode%20Stepe%20283&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0"></iframe>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    function validiraj() {
+      var lozinka = document.getElementById("password").value;
+      var potvrdaLozinke = document.getElementById("confirm_password").value;
+
+      if (lozinka.length < 6) {
+        alert("Greška! Lozinka mora biti minimum 6 karaktera dugačka.");
+        return false;
+      }
+
+      if (!/[A-Z]/.test(lozinka) || !/[0-9]/.test(lozinka)) {
+        alert("Greška: Lozinka mora sadržati makar jedno veliko slovo i makar jedan broj.");
+        return false;
+      }
+
+      if (lozinka != potvrdaLozinke) {
+        alert("Greška: Lozinke se ne podudaraju.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+  <hr class="crta"/>
+  
+  <h1 id="naslov-kontakt">Info</h1>
+  <div id="info">
+    <div id="levi">
+      <div>
+        <h2 class="malinaslov">Možete nas kontaktirati na sledeće načine:</h2><br/>
+        <h4>Adresa: <a href="https://goo.gl/maps/SabY61VdYaA3PCBf8">Vojvode Stepe 283</a></h4><br/>
+        <h4>Telefon: <a href="tel:+381-61-234-567">+381 61 234 567</a></h4><br/>
+        <h4>Fiksni telefon: <a href="tel:011-1234-567">011 1234 567</a></h4>
+      </div>
+    </div>
+    <div id="desni">
+      <div>
+        <h2 class="malinaslov">Na mapi možete videti našu lokaciju!</h2><br/>
+        <h4>Radno vreme radnim danima od 8:00-20:00</h4><br/>
+        <h4>Radimo i vikendom do 15:00</h4>
+      </div>
+    </div>
+  </div>
+  
+  <br/>
+  <hr class="crta"/>
+  <footer id="footer">
+    <div id="levi-futer">
+      <ul>Najposećenije stranice:
+        <li>
+          <a id="prvi-link" href="#">Link1</a>
+        </li>
+        <li>
+          <a id="drugi-link" href="#">Link1</a>
+        </li>
+        <li>
+          <a id="treci-link" href="#">Link1</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="desni-futer">Knjizara copyright 2023&copy;</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knjizara - Pribor</title>
+  <link rel="stylesheet" href="priborStyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav>
+      <ul>
+        <li class="logo-link">
+          <a href="../../index.html">
+            <img alt="Logo knjizare" id="navbar-logo" src="../../img/logo.png">
+          </a>
+        </li>
+        <li><a href="../../index.html">Početna</a></li>
+        <li><a href="../knjige/knjige.html">Knjige</a></li>
+        <li><a href="pribor.html">Pribor</a></li>
+        <li><a href="../galerija/galerija.html">Galerija</a></li>
+        <li><a href="../kontakt/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    
+    <h1 id="naslov-pribor">Pribor</h1>
+    <div>
+        <div id="meni-selekt">
+            <ul>Kategorije<br><br>
+                <li onclick="fillRancevi()">Rančevi</li>
+                <li onclick="fillOlovke()">Olovke</li>
+                <li onclick="fillHemijske()">Hemijske</li>
+                <li onclick="fillSveske()">Sveske</li>
+            </ul>
+        </div>
+        <script>
+            function fillRancevi(){
+                document.getElementById("naslov-pribor").innerHTML = "Rančevi";
+
+                document.getElementById("pribor1").innerHTML =
+                '<img src="img-pribor/ranac-superman.png" alt="Ranac Superman" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Ranac Superman</p>'+
+                    '<h4 class="proizvodjac">Luspar Safta</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">1936rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor2").innerHTML = 
+                '<img src="img-pribor/ranac-deadpool.png" alt="Ranac Deadpool" class="img-pribor">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Ranac Deadpool</p>' +
+                    '<h4 class="proizvodjac">Marvel</h4>' +
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">8499rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("pribor3").innerHTML = '<img src="img-pribor/ranac-music.png" alt="Ranac Musiq" class="img-pribor">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Ranac Musiq</p>' +
+                    '<h4 class="proizvodjac">BeUniq</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">3599rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor4").innerHTML = '<img src="img-pribor/ranac-hellokitty.png" alt="Ranac Hello Kitty" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Ranac Hello Kitty</p>'+
+                    '<h4 class="proizvodjac">Hello Kitty</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">4299rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor5").innerHTML = '<img src="img-pribor/ranac-peppapig.png" alt="Ranac Peppa Pig" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Ranac Peppa Pig</p>'+
+                    '<h4 class="proizvodjac">Peppa Pig</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">2899rsd</div>'+
+                    '</div>'+
+                '</div>';
+                
+                document.getElementById("pribor6").innerHTML = '<img src="img-pribor/ranac-harrypotter.png" alt="Ranac Harry Potter" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Ranac H. Potter</p>'+
+                    '<h4 class="proizvodjac">Disney</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">3990rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor7").innerHTML = '<img src="img-pribor/ranac-barbie.png" alt="Ranac Barbie" class="img-pribor">'+
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Ranac Barbie</p>'+
+                    '<h4 class="proizvodjac">Barbie</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">1990rsd</div>'+
+                    '</div>'+
+                '</div>'; 
+            }
+            function fillOlovke(){
+                document.getElementById("naslov-pribor").innerHTML = "Olovke";
+
+                document.getElementById("pribor1").innerHTML =
+                '<img src="img-pribor/olovka-steadtler.png" alt="Olovka Staedtler HB" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Olovka Staedtler HB</p>'+
+                    '<h4 class="proizvodjac">Staedtler</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">35rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor2").innerHTML = 
+                '<img src="img-pribor/olovka-steadtler2.png" alt="Olovka Staedtler HB" class="img-pribor olovka-slika">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Olovka Staedtler HB2</p>' +
+                    '<h4 class="proizvodjac">Staedtler</h4>' +
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">40rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("pribor3").innerHTML =
+                '<img src="img-pribor/olovka-fabercastel.png" alt="Olovka Faber Castell" class="img-pribor olovka-slika">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Olovka Faber Castell</p>' +
+                    '<h4 class="proizvodjac">Maped</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">25rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor4").innerHTML =
+                '<img src="img-pribor/olovka-creta.png" alt="Olovka Cretacolor B2" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Olovka Cretacolor B2</p>'+
+                    '<h4 class="proizvodjac">Cretacolor</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">13rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor5").innerHTML =
+                '<img src="img-pribor/olovka-blackwing.png" alt="Olovka Blackwing 3B" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Olovka Blackwing 3B</p>'+
+                    '<h4 class="proizvodjac">Domino</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">59rsd</div>'+
+                    '</div>'+
+                '</div>';
+                
+                document.getElementById("pribor6").innerHTML =
+                '<img src="img-pribor/olovka-staedtler3.png" alt="Olovka Staedtler 3B" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Olovka Staedtler 3B</p>'+
+                    '<h4 class="proizvodjac">Staedtler</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">39rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor7").innerHTML = 
+                '<img src="img-pribor/olovka-staedtler4.png" alt="Olovka Staedtler 3B" class="img-pribor olovka-slika">'+
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Olovka Staedtler Lumen B</p>'+
+                    '<h4 class="proizvodjac">Staedtler</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">19rsd</div>'+
+                    '</div>'+
+                '</div>';
+            }
+            function fillHemijske(){
+                document.getElementById("naslov-pribor").innerHTML = "Hemijske olovke";
+
+                document.getElementById("pribor1").innerHTML =
+                '<img src="img-pribor/hemijska-parker.png" alt="Hemijska olovka Parker" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Hemijska olovka Parker</p>'+
+                    '<h4 class="proizvodjac">Parker Pen</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">235rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor2").innerHTML = 
+                '<img src="img-pribor/hemijska-penkalo.png" alt="Hemijska olovka penkalo" class="img-pribor olovka-slika">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Hemijska olovka penkalo</p>' +
+                    '<h4 class="proizvodjac">Mitsubishi</h4>' +
+                    '<hr/><br/> '+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>' +
+                        '<div class="cena">140rsd</div>' +
+                    '</div>' +
+                '</div>';
+
+                document.getElementById("pribor3").innerHTML =
+                '<img src="img-pribor/hemijska-fountain.png" alt="Hemijska olovka fountain" class="img-pribor olovka-slika">' +
+                '<div class="info">' +
+                    '<p class="naziv-pribora">Hemijska olovka fountain</p>' +
+                    '<h4 class="proizvodjac">Nib Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">125rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor4").innerHTML =
+                '<img src="img-pribor/hemijska-waterman.png" alt="Waterman B-point" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Waterman B-point</p>'+
+                    '<h4 class="proizvodjac">Waterman</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">130rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor5").innerHTML =
+                '<img src="img-pribor/hemijska-rolelrball.png" alt="Rollerball Montblanc" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Rollerball Montblanc</p>'+
+                    '<h4 class="proizvodjac">Montblanc</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">159rsd</div>'+
+                    '</div>'+
+                '</div>';
+                
+                document.getElementById("pribor6").innerHTML =
+                '<img src="img-pribor/hemijska-cross.png" alt="Hemijska Uni Gel Pen" class="img-pribor olovka-slika">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Hemijska Uni Gel Pen</p>'+
+                    '<h4 class="proizvodjac">Cross</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">139rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor7").innerHTML = 
+                '<img src="img-pribor/hemijska-penkalo1.png" alt="Hemijska Penkalo Parker" class="img-pribor olovka-slika">'+
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Hemijska Penkalo Parker</p>'+
+                    '<h4 class="proizvodjac">Parker</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">'+
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">190rsd</div>'+
+                    '</div>'+
+                '</div>';
+            }
+            function fillSveske(){
+                document.getElementById("naslov-pribor").innerHTML = "Sveske";
+
+                document.getElementById("pribor1").innerHTML =
+                '<img src="img-pribor/sveska1.png" alt="Sveska Karton" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Karton</p>'+
+                    '<h4 class="proizvodjac">Square Inc.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">35rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor2").innerHTML = 
+                '<img src="img-pribor/sveska2.png" alt="Sveska Zelena" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Zelena</p>'+
+                    '<h4 class="proizvodjac">Square Inc.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">40rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor3").innerHTML =
+                '<img src="img-pribor/sveska3.png" alt="Sveska Plava" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Plava</p>'+
+                    '<h4 class="proizvodjac">Notebook Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">40rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor4").innerHTML =
+                '<img src="img-pribor/sveska4.png" alt="Sveska Crna" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Crna</p>'+
+                    '<h4 class="proizvodjac">Notebook Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">45rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor5").innerHTML =
+                '<img src="img-pribor/sveska5.png" alt="Set svezaka 3kom." class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Set svezaka</p>'+
+                    '<h4 class="proizvodjac">Notebook Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">145rsd</div>'+
+                    '</div>'+
+                '</div>';
+                
+                document.getElementById("pribor6").innerHTML =
+                '<img src="img-pribor/sveska6.png" alt="Sveska Crvena" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Crvena</p>'+
+                    '<h4 class="proizvodjac">Box Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">33rsd</div>'+
+                    '</div>'+
+                '</div>';
+
+                document.getElementById("pribor7").innerHTML = 
+                '<img src="img-pribor/sveska7.png" alt="Sveska Drvo" class="img-pribor">' +
+                '<div class="info">'+
+                    '<p class="naziv-pribora">Sveska Drvo</p>'+
+                    '<h4 class="proizvodjac">Notebook Co.</h4>'+
+                    '<hr/><br/>'+
+                    '<div class="selekcija">' +
+                        '<img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>'+
+                        '<div class="cena">245rsd</div>'+
+                    '</div>'+
+                '</div>';
+            };
+        </script>
+        <div id="pribor-wrapper">
+        <div id="pribor">
+            <div class="pribor-container" id="pribor1">
+                <img src="img-pribor/ranac-superman.png" alt="Ranac Superman" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Superman</p>
+                    <h4 class="proizvodjac">Luspar Safta</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1936rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor2">
+                <img src="img-pribor/ranac-deadpool.png" alt="Ranac Deadpool" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Deadpool</p>
+                    <h4 class="proizvodjac">Marvel</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">8499rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor3">
+                <img src="img-pribor/ranac-music.png" alt="Ranac Musiq" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Musiq</p>
+                    <h4 class="proizvodjac">BeUniq</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">3599rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor4">
+                <img src="img-pribor/ranac-hellokitty.png" alt="Ranac Hello Kitty" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Hello Kitty</p>
+                    <h4 class="proizvodjac">Hello Kitty</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">4299rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor5">
+                <img src="img-pribor/ranac-peppapig.png" alt="Ranac Peppa Pig" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Peppa Pig</p>
+                    <h4 class="proizvodjac">Peppa Pig</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">2899rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor6">
+                <img src="img-pribor/ranac-harrypotter.png" alt="Ranac Harry Potter" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">H. Potter</p>
+                    <h4 class="proizvodjac">Disney</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">3990rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pribor">
+            <div class="pribor-container" id="pribor7">
+                <img src="img-pribor/ranac-barbie.png" alt="Ranac Barbie" class="img-pribor">
+                <div class="info">
+                    <p class="naziv-pribora">Barbie</p>
+                    <h4 class="proizvodjac">Barbie</h4>
+                    <hr/><br/>
+                    <div class="selekcija">
+                        <img id="korpa" alt="Korpa ikonica" src="../../img/kolica.png"></img>
+                        <div class="cena">1990rsd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    </div>
+
+    <footer id="footer">
+        <div id="levi-futer">
+          <ul>Najposećenije stranice:
+            <li>
+              <a id="prvi-link" href="#">Link1</a>
+            </li>
+            <li>
+              <a id="drugi-link" href="#">Link1</a>
+            </li>
+            <li>
+              <a id="treci-link" href="#">Link1</a>
+            </li>
+          </ul>
+        </div>
+    
+        <div id="desni-futer">Knjizara copyright 2023&copy;</div>
+    </footer>
+</body>
+</html>

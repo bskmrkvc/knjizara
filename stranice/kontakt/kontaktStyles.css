@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("../../img/bg.jpg");
+}
+
+#navbar-logo{
+  width: 100px;
+  height: 100px;
+  transition: 0.1s ease-in;
+}
+
+#navbar-logo:hover{
+  width: 110px;
+  height: 110px;
+  transition: 0.1s ease-in;
+}
+
+.logo-link{
+  margin: 20px 25px 25px 25px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+nav{
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px dashed black;
+  display: flex;        
+  height: 150px;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold; 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
+}
+
+nav ul{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+nav * {  
+  display: inline;  
+}  
+
+nav li {    
+  margin-right: 60px;
+}
+
+nav li a {
+
+  transition: 0.2s ease-in;
+  font-size: 40px;  
+  color: rgb(25, 25, 25) !important;    
+  text-decoration: none;  
+}
+
+nav li a:hover{
+  font-size: 50px;
+  transition: 0.2s ease-in-out;
+}
+
+#naslov-kontakt{
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive; 
+    background-color: rgba(255,255,255,0.7);
+}
+
+#kontakt-sadrzaj{
+  margin: auto;
+  display: inline;
+}
+
+.kontakt-forma{  
+  padding: 2%;  
+  float: left;
+  padding-top: 20px;
+  width: 30%;
+  display: flex; 
+  justify-content: center;
+}
+
+form label{
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive; 
+  text-align: right;
+	float: left;
+}
+
+form input{
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif; 
+  border: 1px solid lightskyblue;
+  border-radius: 25px;
+}
+
+input[type="email"]{
+  font-size: 12px;
+  width: 200px;
+}
+
+#submitdugme{
+  width: 200px;
+  height: 50px;
+  padding: 2px;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif; 
+  color: navy;
+  background-color: lightblue;
+  border: 1px solid navy;
+  border-radius: 25px;
+}
+
+.mapa{
+  display: flex;
+  flex-direction: column;
+  float: center;
+  text-align:right;
+  height:600px;   
+  padding: 2%; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.gmap{
+  overflow:hidden;
+  background:none !important;
+  height:600px;
+  width:90%;
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 10px;
+  border: 1px dashed black;
+}
+
+.crta{
+  position: absolute;
+  top: 1400px;
+  margin: 60px 5px 60px 5px;
+}
+
+#info{
+  display: inline;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#info div{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+
+.malinaslov{
+  font-size: 64px;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive; 
+}
+
+div #levi{
+  display: flex; 
+  justify-content: center;
+  float: left;
+  text-align:left;
+  width: 50%;
+}
+
+div #desni{
+  display: flex;
+  flex-direction: column;
+  float: center;
+  text-align:right;
+  padding-right: 5%;
+}
+
+a{
+  color: rgba(35, 35, 35, 1);
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:visited{
+  color: gray;
+
+}
+
+#footer{
+  width: 100%;
+  height: 70px;
+  position:relative;
+  background-color: white;
+  border-top: 2px dashed black;
+  white-space: nowrap;
+  margin-top: 200px;
+  border-radius: 20px;
+  
+}
+
+#levi-futer{
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 85%;
+  display: inline-block;
+}
+
+#levi-futer ul{
+  font-family: 'Quicksand', sans-serif;
+}
+
+#levi-futer ul li{
+  display: inline-block;
+  padding-top: 15px;
+  padding-left: 15px;
+  
+}
+
+#desni-futer{
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#desni-futer{
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1471px) {
+  #levi{
+    margin-left: 20px;
+  }
+  #levi-futer{
+    width: 77%;
+  }
+  #desni-futer{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1381px) {
+  
+  #levi-futer{
+    width: 80%;
+  }
+  #desni-futer{
+    margin-right: 0px;
+  }
+}
+
+
+@media screen and (max-width: 1155px){
+  #levi-futer{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  
+  #levi-futer{
+    width: 75%;
+  }
+
+}
+@media screen and (max-width: 859px) {
+  div #levi{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin:10px 5px 50px 5px;
+  }
+  div #desni{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin:10px 5px 50px 5px;
+  }
+  nav li{
+    margin-right: 20px;
+  }
+  #footer{
+    margin-top: 75px;
+  }
+  #levi-futer{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 760px) {
+  nav{
+    height: 400px;
+  }
+  nav *{
+    display: block;
+  }
+  nav li{
+    width: 100%;
+  }
+  nav ul{
+    margin-top: 130px;
+  }
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100%;
+    left: 41%;
+  }
+  #kontakt-sadrzaj{
+    display: block;
+  }
+  .kontakt-forma{
+    width: 100%;
+  }
+  .mapa{
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  }
+  #levi-futer{
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 525px){
+  #levi-futer{
+    font-size: 10px;
+    width: 65%;
+  }
+  #desni-futer{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-link{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 35%;
+  }
+  
+  #footer{
+    display: block;
+  }
+  #levi-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
+  #desni-futer{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+  }
+}
