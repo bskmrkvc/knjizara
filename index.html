@@ -250,7 +250,94 @@
         </li>
       </ul>
     </div>
+    <script>
+        var trenutnaStranica = window.location.pathname;
+        var imeStranice = provera(trenutnaStranica);
+        
+        var stranice = JSON.parse(localStorage.getItem("najposecenijeStranice")) || {};
 
+        if(stranice[imeStranice]){
+            stranice[imeStranice] += 1;
+        } else {
+            stranice[imeStranice] = 1;
+        }
+
+        let straniceNiz = [
+          {
+            ime : "Početna",
+            brPoseta : parseInt(stranice["Početna"])
+          },
+          {
+            ime : "Knjige",
+            brPoseta : parseInt(stranice["Knjige"])
+          },
+          {
+            ime : "Pribor",
+            brPoseta : parseInt(stranice["Pribor"])
+          },
+          {
+            ime : "Galerija",
+            brPoseta : parseInt(stranice["Galerija"])
+          },
+          {
+            ime : "Kontakt",
+            brPoseta : parseInt(stranice["Kontakt"])
+          }
+        ];
+        console.log(straniceNiz[0].brPoseta);
+        for(let i = 0 ; i<straniceNiz.length-1; i++){
+          for(let j = i+1; j<straniceNiz.length; j++){
+            if(parseInt(straniceNiz[i].brPoseta) < parseInt(straniceNiz[j].brPoseta)){
+              let temp = straniceNiz[i];
+              straniceNiz[i] = straniceNiz[j];
+              straniceNiz[j] = temp;
+            }
+          }
+        }
+
+        console.log(straniceNiz);
+
+        localStorage.setItem("najposecenijeStranice", JSON.stringify(stranice));
+
+        let linkPrveStranice = kreirajAdresu(straniceNiz[0].ime);
+        console.log(linkPrveStranice);
+        let imePrveStranice = straniceNiz[0].ime;
+        console.log(imePrveStranice);
+        let linkDrugeStranice = kreirajAdresu(straniceNiz[1].ime);
+        console.log(linkDrugeStranice);
+        let imeDrugeStranice = straniceNiz[1].ime;
+        console.log(imeDrugeStranice);
+        let linkTreceStranice = kreirajAdresu(straniceNiz[2].ime);
+        console.log(linkTreceStranice);
+        let imeTreceStranice = straniceNiz[2].ime;
+        console.log(imeTreceStranice);
+
+        document.getElementById("prvi-link").href=linkPrveStranice;
+        document.getElementById("prvi-link").innerHTML=imePrveStranice;
+        document.getElementById("drugi-link").href=linkDrugeStranice;
+        document.getElementById("drugi-link").innerHTML=imeDrugeStranice;
+        document.getElementById("treci-link").href=linkTreceStranice;
+        document.getElementById("treci-link").innerHTML=imeTreceStranice;
+
+        function provera(adresa){
+            var delovi = adresa.split("/");
+            var imeStranice = delovi[delovi.length - 1];
+            console.log(imeStranice); 
+            if(imeStranice==="index.html") return "Početna";
+            else if(imeStranice==="knjige.html") return "Knjige";
+            else if(imeStranice==="pribor.html") return "Pribor";
+            else if(imeStranice==="galerija.html") return "Galerija";
+            else if(imeStranice==="kontakt.html") return "Kontakt";
+        }
+
+        function kreirajAdresu(ime){
+          if(ime==="Početna") return "index.html";
+          else if(ime==="Knjige") return "stranice/knjige/knjige.html";
+          else if(ime==="Pribor") return "stranice/pribor/pribor.html";
+          else if(ime==="Galerija") return "stranice/galerija/galerija.html";
+          else if(ime==="Kontakt") return "stranice/kontakt/kontakt.html";
+        }
+    </script>
     <div id="desni-futer">Knjizara copyright 2023&copy;</div>
   </footer>
 </body>

@@ -162,7 +162,7 @@ input[type="checkbox"]:checked ~ .grid {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-div label img{
+div #lightbox img{
     width: 400px;
 }
 

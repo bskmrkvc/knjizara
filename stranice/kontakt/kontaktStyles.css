@@ -172,7 +172,7 @@ div #levi{
   display: flex; 
   justify-content: center;
   float: left;
-  text-align:left;
+  text-align:center;
   width: 50%;
 }
 
@@ -180,7 +180,7 @@ div #desni{
   display: flex;
   flex-direction: column;
   float: center;
-  text-align:right;
+  text-align:center;
   padding-right: 5%;
 }
 
